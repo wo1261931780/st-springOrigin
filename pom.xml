@@ -11,8 +11,13 @@
 	<groupId>junw555</groupId>
 	<artifactId>st-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>st-spring.github.io</name>
 	<description>st-spring.github.io</description>
+	<modules>
+		<module>module001</module>
+		<module>module002</module>
+	</modules>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
