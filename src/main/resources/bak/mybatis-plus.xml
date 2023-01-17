@@ -2,8 +2,8 @@
 <!DOCTYPE configuration
 		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration >
-	<plugins>
-		<plugin interceptor="com.example.springbootdemo0116.config.MybatisPlusConfiguration"/>
-	</plugins>
+<configuration>
+	<!--<plugins>-->
+	<!--<plugin interceptor="com.example.springbootdemo0116.config.MybatisPlusConfiguration"/>-->
+	<!--</plugins>-->
 </configuration>

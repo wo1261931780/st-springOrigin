@@ -1,4 +1,4 @@
-package java.junw555;
+package test.java.junw555;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;

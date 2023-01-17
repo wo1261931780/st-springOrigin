@@ -14,13 +14,13 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2023-01-19-26  星期一
  * @description
  */
-@Configuration
-@MapperScan("junw555.mapper")
+// @Configuration
+// @MapperScan("junw555.mapper")
 public class MybatisPlusConfiguration {
 	// 配置分页插件
 
 	@Bean
-	public PaginationInnerInterceptor paginationInnerInterceptor(){
+	public PaginationInnerInterceptor paginationInnerInterceptor() {
 		return new PaginationInnerInterceptor();
 	}
 }

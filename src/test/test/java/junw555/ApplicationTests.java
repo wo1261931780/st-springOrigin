@@ -1,4 +1,4 @@
-package junw555;
+package test.java.junw555;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
