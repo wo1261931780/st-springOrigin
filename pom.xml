@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -11,26 +11,274 @@
 	<groupId>wo1261931780</groupId>
 	<artifactId>st-springOrigin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>st-springOrigin</name>
 	<description>Demo project for Spring Boot</description>
+	<modules>
+		<module>module001</module>
+		<module>module002</module>
+	</modules>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+
+		<!--=============================================================================================-->
+		<!--下面两个配置基本地启动，后面的按需修改-->
+		<!--=============================================================================================-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		<!--spring网络WEB-->
+		<!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
+		<!--=============================================================================================-->
+		<!--spring-->
+		<!--=============================================================================================-->
+		<!--Spring Boot DevTools 开发人员工具-->
+		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!--Spring配置处理器 开发者工具-->
+		<!--为开发人员生成元数据，以便在使用自定义配置键（ex.application.properties/.yml文件）时提供上下文帮助和 "代码完成"。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+			<!--添加以后，可以避免自动装配报错-->
+		</dependency>
+		<!--使用Spring Boot的Actuator的入门课程，它提供了生产准备的功能，帮助你监控和管理你的应用程序。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--DEVELOPER_TOOLS-->
+		<!--=============================================================================================-->
+		<!--Lombok 开发者工具-->
+		<!--帮助减少模板代码的Java注释库。-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+			<scope>provided</scope>
 		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--WEB-->
+		<!--=============================================================================================-->
+		<!--Spring Web Services WEB-->
+		<!--为契约优先的SOAP开发提供了便利。允许使用许多操作XML有效载荷的方法之一来创建灵活的Web服务。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--MESSAGING-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--日志系统-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--数据库-->
+		<!--=============================================================================================-->
+
+		<!--mysql的驱动-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.32</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--Mybatis-->
+		<!--=============================================================================================-->
+
+		<!--mybatis的分页助手插件-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.3.2</version>
+		</dependency>
+		<!--MyBatis框架SQL-->
+		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
+		<!--这里是mybatis按照spring的标准，开发出来的整合包-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
+		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
+		<!--	<version>3.0.1</version>-->
+		<!--</dependency>-->
+
+		<!--使用mybatis-plus以后，这些东西就不需要了-->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>com.baomidou</groupId>-->
+		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
+		<!--	<version>3.5.3.1</version>-->
+		<!--	&lt;!&ndash;依赖中一共两个jar包&ndash;&gt;-->
+		<!--	&lt;!&ndash;一个是mybatis和spring整合包&ndash;&gt;-->
+		<!--	&lt;!&ndash;一个是mybatis包&ndash;&gt;-->
+		<!--</dependency>-->
+
+		<!--mybatis-plus的代码生成器-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>3.5.3.1</version>
+		</dependency>
+
+		<!--生成器对应的模板技术-->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-engine-core</artifactId>
+			<version>2.3</version>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--数据库连接池-->
+		<!--=============================================================================================-->
+
+		<!--阿里巴巴德鲁伊连接池-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.23</version>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--redis的包-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--TEST-->
+		<!--=============================================================================================-->
+		<!--使用包括JUnit Jupiter、Hamcrest和Mockito在内的库测试Spring Boot应用程序的入门者-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!--Spring Test支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
+		<!--它提供了一致的Spring ApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--安全框架-->
+		<!--=============================================================================================-->
+		<!--spring安全 SECURITY-->
+		<!--为Spring应用程序提供高度可定制的认证和访问控制框架。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!--设置权限-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--dubbo相关-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--文件IO-->
+		<!--=============================================================================================-->
+		<!-- 文件上传组件 -->
+		<dependency>
+			<!--注掉，和Commons-io有冲突-->
+			<!--但是比Commons-io范围大-->
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.5</version>
+		</dependency>
+		<!--Quartz是一个工作调度库，可以嵌入到java应用程序中，支持事务、持久性、集群和插件。-->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz-jobs</artifactId>
+		</dependency>
+		<!--存储服务-->
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>7.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.18.1</version>
+		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--项目特殊依赖-->
+		<!--=============================================================================================-->
+
+		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+		<!--用于Java的灵活的XML框架-->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.12.2</version>
+		</dependency>
+
+		<!--阿里云短信服务-->
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-core</artifactId>
+			<version>4.5.16</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
+		<!--Guava是一套核心库和扩展库，包括实用类、Google的集合、I/O类等等。-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.1-jre</version>
 		</dependency>
 	</dependencies>
 
@@ -40,15 +288,52 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<!--<fork>true</fork>-->
+					<addResources>true</addResources>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<!--<classifier>${repackage.classifier}</classifier>-->
+					<image>
+						<builder>paketobuildpacks/builder:tiny</builder>
+						<env>
+							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+						</env>
+					</image>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.0</version>
+				<!--添加这个插件以后，我们就可以直接使用pom中的配置文件-->
+				<!--接着，其它地方就可以解析这里的配置参数-->
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<useDefaultDelimiters>true</useDefaultDelimiters>
+				</configuration>
+			</plugin>
+			<!-- java编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<!--<configuration>-->
+				<!--	<source>1.8</source>-->
+				<!--	<target>1.8</target>-->
+				<!--	<encoding>UTF-8</encoding>-->
+				<!--</configuration>-->
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+	</repositories>
+	<pluginRepositories>
+	</pluginRepositories>
+	<profiles>
+	</profiles>
 
 </project>
