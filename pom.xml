@@ -271,7 +271,7 @@
 		<dependency>
 			<groupId>com.aliyun</groupId>
 			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-			<version>2.1.0</version>
+			<version>2.2.1</version>
 		</dependency>
 		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
 		<!--Guava是一套核心库和扩展库，包括实用类、Google的集合、I/O类等等。-->
