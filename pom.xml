@@ -20,6 +20,13 @@
 	</modules>
 	<properties>
 		<java.version>17</java.version>
+		<!--<spring-native.version>0.12.1</spring-native.version>-->
+		<!--maven的打包配置-->
+		<!--<maven.compiler.source>8</maven.compiler.source>-->
+		<!--<maven.compiler.target>8</maven.compiler.target>-->
+		<!--编码格式-->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	<dependencies>
 
