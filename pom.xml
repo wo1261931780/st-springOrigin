@@ -122,7 +122,7 @@
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
-			<version>5.3.2</version>
+			<version>5.3.3</version>
 		</dependency>
 		<!--MyBatis框架SQL-->
 		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
