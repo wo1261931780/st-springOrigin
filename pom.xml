@@ -149,7 +149,7 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-generator</artifactId>
-			<version>3.5.7</version>
+			<version>3.5.8</version>
 		</dependency>
 
 		<!--生成器对应的模板技术-->
